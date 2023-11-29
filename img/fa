@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vn">
+  
+<head>
+    <meta charset="UTF+7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elynas - Tea & Coffee</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img width="140px" height="60px" src="elynas-logo.png" alt="Logo Elynas">
+            </a>
+        </div>
+        <div class="menu">
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="menu.html">Thực Đơn</a>
+                <ul class="sub-menu">
+                    <!-- <li><a href="">Cafe</a>
+                        <ul>
+                            <li><a href="">Latte</a></li>
+                            <li><a href="">Cafe Đen</a></li>
+                            <li><a href="">Cafe Sữa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Trà</a>
+                        <ul>
+                            <li><a href="">Hồng Trà</a></li>
+                            <li><a href="">Trà Trái Cây</a></li>
+                            <li><a href="">Trà Sữa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Thức Uống Khác</a>
+                        <ul>
+                            <li><a href="">Sinh Tố</a></li>
+                            <li><a href="">Nước Ép</a></li>
+                            <li><a href="">Ca Cao</a></li>
+                            <li><a href="">Soda</a></li>
+                            <li><a href="">Sữa Chua</a></li>
+                            <li><a href="">Đá Xay</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Bánh Ngọt</a>
+
+                    </li> -->
+                </ul>
+            </li>
+
+            <li><a href="order.hmtl">Đặt Hàng</a></li>
+            <li><a href="">Liên Hệ</a></li>
+        </div>
+        <div class="others">
+            <li><input placeholder="Tìm Kiếm" type="text">
+                <i><img width="20px" height="20px" src="icon-search.png"></i>
+            </li>
+            <li><a href="signin.html">Đăng Nhập</a></li>
+        </div>
+    </header>
+
+
+    <main>
+        <section id="slider">
+            <div class="background-index">
+                <img src="elynas-index-bgr1.png">
+                <img src="elynas-index-bgr2.png">
+                <img src="elynas-index-bgr3.png">
+                <img src="elynas-index-bgr4.png">
+                <img src="elynas-index-bgr5.png">
+            </div>
+            <div class="dot-container">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </section>
+        <section class="category">
+            <div class="category">
+                <div class="headline">
+                    <h3>Elynas - Tea & Coffee</h3>
+                    <a>Nguồn cảm hứng từ thiên nhiên, hương vị tinh tế.</a>
+                </div>
+                <div class="sub-cat">
+                    <ul>
+                        <li><a href="tea.html">
+                            <img src="decorate-index1.png">
+                            </a>
+                        </li>
+                        <li><a href="cafe.html">
+                            <img src="decorate-index2.png">
+                            </a>
+                        </li>
+                        <li><a href="otherdrink.hmtl">
+                            <img src="decorate-index3.png">
+                                </a>
+                        </li>
+                        <li><a href="pastry.html">
+                            <img src="decorate-index4.png">
+                                </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div id="footer">
+            
+            <div class="contactBySocialMedia">
+                <a>Contact us by :</a>
+                <ul>
+                    <li><a style="color: #;" href="https://www.facebook.com/profile.php?id=100082839331339" target="_blank"><i><img width="40px" height="40px" src="icon-facebook.png"></i></a></li>
+                    <li><a style="color: #;" href="https://www.youtube.com/channel/UCdvAt-M9xRWo4yNJK8S5CKw"target="_blank"><i><img width="40px" height="40px" src="icon-youtube.png"></i></a></li>
+                    <li><a style="color: #;" href="https://www.instagram.com/__tienminh.0112__/" target="_blank"><i><img width="40px" height="40px" src="icon-instagram.png"></i></a></li>
+                </ul>
+            </div>
+            <div class="contactByCall">
+                <a href="tel:9031849810">
+                    <i><img width="15px" height="15px" src="icon-call.png"></i>
+                    <span data-class="phone_contact_i" class="link_footer phone_contact_tem color-phone-contact contenteditable" style=""> 0931849810 </span>
+                </a>
+            </div>
+            <div class="contactByMail">
+                <a href="mailto:tienminh.0112.lynn@gmail.com">
+                   <i><img width="15px" height="15px" src="icon-mail.png"></i>
+                   <span data-class="email_contact_i" class="link_footer2 email_contact_tem color-email-contact contenteditable" style=""> tienminh.0112.lynn@gmail.com </span>
+                </a>
+            </div>
+            <div class="copyRight">© 2023 Elynas. All rights reserved</div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    const imgPosition = document.querySelectorAll(".background-index img")
+    const imgContainer = document.querySelector('.background-index')
+    const dotItem = document.querySelectorAll(".dot")
+    let imgNumber =imgPosition.length
+    let index = 0
+    imgPosition.forEach(function(image,index){
+        image.style.left =index*100 +"%"
+        dotItem[index].addEventListener("click",function(){
+            slider(index)
+        })
+
+    })
+    function imgSlide(){
+        index++;
+        console.log(index)
+        if(index>=imgNumber) {index =0}
+        slider(index)
+    }
+    function slider(index) {
+        imgContainer.style.left ="-" + index*100 + "%"
+        const dotActive = document.querySelector('.active')
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
+
+    }
+    setInterval(imgSlide,5000)
+
+</script>
+
+</html>
